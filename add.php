@@ -17,7 +17,8 @@
                 <option value="" selected disabled>Select Class</option>
                 <option value="1">BCA</option>
                 <option value="2">BSC</option>
-                <option value="3">B.TECH</option>
+                <option value="3">BA</option>
+                <option value="4">B.TECH</option>
             </select>
         </div>
         <div class="form-group">
