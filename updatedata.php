@@ -1,7 +1,7 @@
 <?php
 include 'config.php'; // Include the correct database connection file
 
-if(isset($_POST['sid']) && isset($_POST['sname']) && isset($_POST['saddress']) && 
+if(isset($_POST['sid']) && !empty($_POST['sid']) && isset($_POST['sname']) && isset($_POST['saddress']) && 
 isset($_POST['sclass']) && isset($_POST['sphone']))
 {
     $sid = $_POST['sid'];
@@ -9,6 +9,9 @@ isset($_POST['sclass']) && isset($_POST['sphone']))
     $saddress = $_POST['saddress'];
     $sclass = $_POST['sclass'];
     $sphone = $_POST['sphone'];
+
+    // Debugging: Print the values to ensure they are set correctly
+    echo "sid: $sid, sname: $sname, saddress: $saddress, sclass: $sclass, sphone: $sphone";
 
     $sql = "UPDATE students SET name='{$sname}', address='{$saddress}', class='{$sclass}', phone='{$sphone}' WHERE id={$sid}";
 
