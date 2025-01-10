@@ -10,7 +10,7 @@ isset($_POST['sclass']) && isset($_POST['sphone']))
     $sclass = $_POST['sclass'];
     $sphone = $_POST['sphone'];
 
-    $sql = "UPDATE students SET name='{$sname}', address='{$saddress}', class='{$sclass}', phone='{$sphone}' WHERE id={$sid}";
+    $sql = "UPDATE students SET name='{$sname}', address='{$saddress}', class='{$sclass}', phone='{$sphone}' WHERE sid={$sid}"; // Use the correct column name
 
     $result = mysqli_query($conn, $sql) or die("Query Unsuccessful: " . mysqli_error($conn));
 
