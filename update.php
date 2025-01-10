@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+
 <div id="main-content">
     <h2>Edit Record</h2>
     <form class="post-form" action="" method="post">
@@ -32,7 +33,7 @@
             <label>Phone</label>
             <input type="text" name="sphone" value="" />
         </div>
-    <input class="submit" type="submit" value="Update"  />
+    <input class="submit" type="submit" value="Update" />
     </form>
 </div>
 </div>
