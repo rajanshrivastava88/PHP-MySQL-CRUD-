@@ -4,6 +4,13 @@ include 'header.php';
 
 <div id="main-content">
     <h2>All Records</h2>
+
+    <?php 
+    
+    $conn = mysqli_connect( "localhost", "root", "", "crud", port: "3307") or 
+    die( "Connection Failed" );
+    
+    ?>
     <table cellpadding="7px">
         <thead>
         <th>Id</th>
