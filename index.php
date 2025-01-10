@@ -7,8 +7,8 @@ include 'header.php';
 
     <?php 
     
-    $conn = mysqli_connect( "localhost", "root", "", "crud_operations", port: "3307") or 
-    die( "Connection Failed" );
+    $conn = mysqli_connect( "localhost", "root", "", 
+    "crud_operations", port: "3307") or die( "Connection Failed" );
 
     $sql = "SELECT * FROM students JOIN studentclass WHERE students.sclass = studentclass.cid";
     $result = mysqli_query( $conn, $sql ) or die( "Query Unsuccessful." );
