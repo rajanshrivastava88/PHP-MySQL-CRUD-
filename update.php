@@ -15,7 +15,7 @@
         include 'config.php';
         $sid = $_POST['sid'];
         $sql = "SELECT * FROM students WHERE id = {$sid}";
-        $result = mysqli_query($conn, $sql) or die("Query Unsuccessful.");
+        $result = mysqli_query($conn, $sql) or die("Query Unsuccessful: " . mysqli_error($conn));
 
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -47,6 +47,8 @@
                 </form>
     <?php
             }
+        } else {
+            echo "<p>No Record Found for ID: {$sid}</p>";
         }
     }
     ?>
