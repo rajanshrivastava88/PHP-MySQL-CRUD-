@@ -10,14 +10,13 @@ isset($_POST['sclass']) && isset($_POST['sphone']))
     $sclass = $_POST['sclass'];
     $sphone = $_POST['sphone'];
 
-    // Debugging: Print the values to ensure they are set correctly
-    echo "sid: $sid, sname: $sname, saddress: $saddress, sclass: $sclass, sphone: $sphone";
-
     $sql = "UPDATE students SET name='{$sname}', address='{$saddress}', class='{$sclass}', phone='{$sphone}' WHERE id={$sid}";
 
     $result = mysqli_query($conn, $sql) or die("Query Unsuccessful: " . mysqli_error($conn));
 
+    // Redirect to index.php after successful update
     header("Location: index.php");
+    exit();
 }
 
 mysqli_close($conn);
