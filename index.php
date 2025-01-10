@@ -1,5 +1,10 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 include 'header.php';
+include 'config.php';
 ?>
 
 <div id="main-content">
@@ -7,7 +12,7 @@ include 'header.php';
     <table cellpadding="7px">
         <thead>
         <th>Id</th>
-        <th>Name</th>
+        <th>Name</th>a
         <th>Address</th>
         <th>Class</th>
         <th>Phone</th>
@@ -25,6 +30,7 @@ include 'header.php';
                     <a href='delete-inline.php'>Delete</a>
                 </td>
             </tr>
+
             <tr>
                 <td>2</td>
                 <td>Shivya Srivastava</td>
@@ -36,6 +42,7 @@ include 'header.php';
                     <a href='delete-inline.php'>Delete</a>
                 </td>
             </tr>
+
             <tr>
                 <td>3</td>
                 <td>Anish</td>
@@ -47,6 +54,7 @@ include 'header.php';
                     <a href='delete-inline.php'>Delete</a>
                 </td>
             </tr>
+
             <tr>
                 <td>4</td>
                 <td>Kishan</td>
@@ -58,6 +66,7 @@ include 'header.php';
                     <a href='delete-inline.php'>Delete</a>
                 </td>
             </tr>
+
             <tr>
                 <td>5</td>
                 <td>Mohit</td>
@@ -69,6 +78,7 @@ include 'header.php';
                     <a href='delete-inline.php'>Delete</a>
                 </td>
             </tr>
+
         </tbody>
     </table>
 </div>
