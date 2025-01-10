@@ -4,16 +4,6 @@ include 'header.php';
 
 <div id="main-content">
     <h2>All Records</h2>
-
-    <?php 
-    
-    $conn = mysqli_connect( "localhost", "root", "", 
-    "crud_operations", port: "3307") or die( "Connection Failed" );
-
-    $sql = "SELECT * FROM students JOIN studentclass WHERE students.sclass = studentclass.cid";
-    $result = mysqli_query( $conn, $sql ) or die( "Query Unsuccessful." );
-    
-    ?>
     <table cellpadding="7px">
         <thead>
         <th>Id</th>
