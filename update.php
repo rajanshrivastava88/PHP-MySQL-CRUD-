@@ -14,7 +14,7 @@
     if (isset($_POST['showbtn'])) {
         include 'config.php';
         $sid = $_POST['sid'];
-        $sql = "SELECT * FROM students WHERE id = {$sid}";
+        $sql = "SELECT * FROM students WHERE sid = {$sid}"; // Use the correct column name
         $result = mysqli_query($conn, $sql) or die("Query Unsuccessful: " . mysqli_error($conn));
 
         if (mysqli_num_rows($result) > 0) {
@@ -23,7 +23,7 @@
                 <form class="post-form" action="updatedata.php" method="post">
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="hidden" name="sid" value="<?php echo $row['id']; ?>" />
+                        <input type="hidden" name="sid" value="<?php echo $row['sid']; ?>" /> <!-- Use the correct column name -->
                         <input type="text" name="sname" value="<?php echo $row['name']; ?>" />
                     </div>
                     <div class="form-group">
@@ -36,7 +36,8 @@
                             <option value="" selected disabled>Select Class</option>
                             <option value="1" <?php if ($row['class'] == 1) echo 'selected'; ?>>BCA</option>
                             <option value="2" <?php if ($row['class'] == 2) echo 'selected'; ?>>BSC</option>
-                            <option value="3" <?php if ($row['class'] == 3) echo 'selected'; ?>>B.TECH</option>
+                            <option value="3" <?php if ($row['class'] == 3) echo 'selected'; ?>>BA</option>
+                            <option value="4" <?php if ($row['class'] == 4) echo 'selected'; ?>>B.TECH</option>
                         </select>
                     </div>
                     <div class="form-group">
