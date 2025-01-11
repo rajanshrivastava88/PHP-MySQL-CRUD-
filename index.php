@@ -79,6 +79,18 @@ include 'config.php';
                 </td>
             </tr>
 
+            <tr>
+                <td>6</td>
+                <td>Shivam</td>
+                <td>Delhi</td>
+                <td>B.Tech</td>
+                <td>9876543210</td>
+                <td>
+                    <a href='edit.php'>Edit</a>
+                    <a href='delete-inline.php'>Delete</a>
+                </td>
+            </tr>
+
         </tbody>
     </table>
 </div>
